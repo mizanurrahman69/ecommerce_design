@@ -54,8 +54,7 @@ HTML (HyperText Markup Language) is the standard markup language used to create 
 8. Analytics and Reporting: <b>Ecommerce Website</b> often integrate analytics tools to track and analyze user behavior, sales performance, conversion rates, and other key metrics. These insights help businesses make data-driven decisions to optimize their website's performance, marketing strategies, and overall customer experience.
 
 In conclusion, an<b>Ecommerce Website</b> is a digital platform that enables businesses to sell products or services online. It incorporates various components such as a product catalog, shopping cart, payment gateway, user accounts, search functionality, security measures, responsive design, and analytics tools to provide a seamless shopping experience for customers.
-
-    </p>
+</p>
 
 <ol>
     <li>Homepage 3 &amp; 13 Inner page</li>
