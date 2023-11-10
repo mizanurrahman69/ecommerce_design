@@ -102,7 +102,6 @@ h3 {
 
 .container {
   width: 1400px;
-  border: var(--border);
   margin: auto;
   padding: 0px 15px;
 }
