@@ -1,7 +1,4 @@
-<div style="width: 100%; height: 100%; justify-content: center; align-items: center; display: inline-flex">
-    <div style="width: 32px; height: 32px; position: relative">
-        <div style="width: 27.33px; height: 27.33px; left: 1.67px; top: 1.67px; position: absolute; background: #428AF6"></div>
-        <div style="width: 4.66px; height: 4.66px; left: 25.67px; top: 25.67px; position: absolute; background: #428AF6"></div>
-        <div style="width: 32px; height: 32px; left: 0px; top: 0px; position: absolute; opacity: 0"></div>
-    </div>
-</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <path d="M15.3333 28.9998C7.79999 28.9998 1.66666 22.8665 1.66666 15.3332C1.66666 7.79984 7.79999 1.6665 15.3333 1.6665C22.8667 1.6665 29 7.79984 29 15.3332C29 22.8665 22.8667 28.9998 15.3333 28.9998ZM15.3333 3.6665C8.89332 3.6665 3.66666 8.9065 3.66666 15.3332C3.66666 21.7598 8.89332 26.9998 15.3333 26.9998C21.7733 26.9998 27 21.7598 27 15.3332C27 8.9065 21.7733 3.6665 15.3333 3.6665Z" fill="black"/>
+  <path d="M29.3333 30.3333C29.08 30.3333 28.8266 30.2399 28.6266 30.0399L25.96 27.3733C25.5733 26.9866 25.5733 26.3466 25.96 25.9599C26.3466 25.5733 26.9867 25.5733 27.3733 25.9599L30.04 28.6266C30.4267 29.0133 30.4267 29.6533 30.04 30.0399C29.84 30.2399 29.5867 30.3333 29.3333 30.3333Z" fill="black"/>
+</svg>
