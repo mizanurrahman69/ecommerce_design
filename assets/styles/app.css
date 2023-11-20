@@ -175,10 +175,10 @@ nav .nav_body .manu ul li a {
 }
 nav .nav_body .manu ul li a::after {
   content: "";
-  height: 2px;
+  height: 5px;
   width: 0;
   position: absolute;
-  bottom: -10px;
+  bottom: -16px;
   background: var(--gradient-linear-stroke-bottom, linear-gradient(147deg, rgba(12, 104, 244, 0.3) 60.98%, rgba(12, 104, 244, 0.7) 81.93%, rgba(12, 104, 244, 0.3) 99.45%));
   left: -10px;
   background-position: center center;
@@ -219,7 +219,7 @@ nav .nav_body .action_manues ul li a .svg_icon:hover {
   opacity: 0;
   visibility: hidden;
   top: 103px;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 #product_category_jumbo_manu.active {
   display: block;
