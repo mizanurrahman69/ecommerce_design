@@ -203,6 +203,20 @@ nav .nav_body .action_manues ul li {
 nav .nav_body .action_manues ul li:has(.active) > a .svg_icon {
   background-color: var(--primarry);
 }
+nav .nav_body .action_manues ul li a .count {
+  position: absolute;
+  border-radius: 40px;
+  color: var(--White, #FFF);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  background-color: var(--primarry);
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  right: 10px;
+}
 nav .nav_body .action_manues ul li a .svg_icon {
   transition-duration: 0.3s;
 }
@@ -378,6 +392,141 @@ nav .nav_body .action_manues ul li a .svg_icon:hover {
   font-size: 14px;
   color: var(--black);
   font-weight: 300;
+}
+
+.cart_items {
+  position: absolute;
+  top: calc(100% + 29px);
+  width: 512px;
+  right: 0;
+  background-color: var(--white);
+  padding: 16px;
+  box-shadow: 0px 10px 10px;
+  border-bottom-left-radius: 3px;
+  border-top: 1px solid var(--primarry);
+  z-index: 9;
+  max-height: 700px;
+}
+.cart_items .top .cart_top_tag {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.cart_items .mid {
+  padding: 8px;
+}
+.cart_items .mid .cart_item_list .cart_item {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+  padding: 16px 32px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+.cart_items .mid .cart_item_list .cart_item .content .product_name {
+  color: #2D2D2D;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.cart_items .mid .cart_item_list .cart_item .content .sizes {
+  color: #2D2D2D;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  line-height: normal;
+}
+.cart_items .mid .cart_item_list .cart_item .content .color {
+  color: var(--neutral-gray-717171, #717171);
+  font-size: 10px;
+  font-weight: bold;
+  line-height: normal;
+  margin-top: 10px;
+}
+.cart_items .mid .cart_item_list .cart_item .content .qty i {
+  color: var(--neutral-gray-717171, #717171);
+  font-size: 10px;
+  font-weight: bold;
+  line-height: normal;
+}
+.cart_items .mid .cart_item_list .cart_item .content .extra_features ul {
+  display: block;
+}
+.cart_items .mid .cart_item_list .cart_item .content .extra_features ul li {
+  display: flex;
+  color: var(--neutral-gray-717171, #717171);
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: bold;
+  align-items: center;
+}
+.cart_items .mid .cart_item_list .cart_item .content .extra_features ul li .svg_icon {
+  height: 16px;
+  width: 16px;
+  background-color: var(--primarry);
+}
+.cart_items .mid .cart_item_list .cart_item .content .qty_changer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+.cart_items .mid .cart_item_list .cart_item .content .qty_changer .price {
+  font-style: 13px;
+  line-height: 15px;
+}
+.cart_items .mid .cart_item_list .cart_item .content .qty_changer .qty_updater {
+  display: flex;
+}
+.cart_items .mid .cart_item_list .cart_item .content .qty_changer .qty_updater .button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+.cart_items .mid .cart_item_list .cart_item .content .qty_changer .qty_updater .qty_input {
+  display: flex;
+  gap: 3px;
+}
+.cart_items .mid .cart_item_list .cart_item .content .qty_changer .qty_updater .qty_input input {
+  width: 45px;
+}
+.cart_items .bottom {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  border: var(--border);
+}
+.cart_items .bottom .left .tittle {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+}
+.cart_items .bottom .left .ammount {
+  font-style: 15px;
+  font-weight: bold;
+  line-height: 17px;
+}
+.cart_items .bottom .right {
+  flex: 1;
+}
+.cart_items .bottom .right a {
+  display: flex;
+  gap: 8px;
+  background-color: var(--primarry);
+  color: var(--white);
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  display: flex;
+}
+.cart_items .bottom .right a .tittle {
+  font-weight: 600;
+}
+.cart_items .bottom .right a .svg_icon {
+  background-color: var(--white);
 }
 
 /*# sourceMappingURL=app.css.map */

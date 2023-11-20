@@ -69,12 +69,28 @@ nav {
                     position: relative;
 
                     &:has(.active) {
-                       > a .svg_icon{
+                        >a .svg_icon {
                             background-color: var(--primarry);
                         }
                     }
 
                     a {
+                        .count {
+                            position: absolute;
+                            // border: 1px solid red;
+                            border-radius: 40px;
+                            color: var(--White, #FFF);
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 24px;
+                            background-color: var(--primarry);
+                            width: 24px;
+                            height: 24px;
+                            top: 10px;
+                            right: 10px;
+                        }
+
                         .svg_icon {
                             //  border: var(--border);
                             transition-duration: .3s;
