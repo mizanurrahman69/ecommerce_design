@@ -1,0 +1,91 @@
+nav {
+    .nav_body {
+        // border: var(--border);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 0px;
+
+        .logo {
+            height: 65px;
+
+            img {}
+        }
+
+        .manu {
+            ul {
+                // border: var(--border);
+                display: flex;
+                flex-wrap: wrap;
+                gap: 65px;
+                height: 100%;
+                align-items: center;
+                height: 100%;
+                align-items: center;
+                text-transform: capitalize;
+
+                li {
+                    position: relative;
+
+                    a {
+                        font-size: 18px;
+                        color: var(--black);
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            height: 2px;
+                            width: 0;
+                            position: absolute;
+                            bottom: -10px;
+                            background: var(--gradient-linear-stroke-bottom, linear-gradient(147deg, rgba(12, 104, 244, 0.30) 60.98%, rgba(12, 104, 244, 0.70) 81.93%, rgba(12, 104, 244, 0.30) 99.45%));
+                            left: -10px;
+                            background-position: center center;
+                            transition-duration: .3s;
+                        }
+
+                        &:hover {
+                            color: var(--primarry);
+
+                            &::after {
+                                width: calc(100% + 20px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .action_manues {
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+                height: 100%;
+                align-items: center;
+
+                li {
+                    position: relative;
+
+                    &:has(.active) {
+                       > a .svg_icon{
+                            background-color: var(--primarry);
+                        }
+                    }
+
+                    a {
+                        .svg_icon {
+                            //  border: var(--border);
+                            transition-duration: .3s;
+
+                            &:hover {
+                                background-color: var(--primarry);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
