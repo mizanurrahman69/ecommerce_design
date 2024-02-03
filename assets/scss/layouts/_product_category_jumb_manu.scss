@@ -1,0 +1,173 @@
+#product_category_jumbo_manu {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>), lightgray 0px 0.701px / 100% 426.035% no-repeat;
+    height: calc(100vh - 104px);
+    width: 100vw;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    top: 103px;
+    transition-duration: .3s;
+    transform: scale(0);
+    &.active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        z-index: 99;
+    }
+
+    .product_list_manu {
+        border-top: 2px solid var(--primarry);
+
+        .overlay {
+            background: var(--white);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .product_categories {
+                display: flex;
+                .category_list {
+                    // border: var(--border);
+                    width: 290px;
+                    padding: 24px 16px;
+                    border-right: 1px solid var(--natural_gray);
+
+                    ul {
+                        li {
+                            margin-bottom: 16px;
+
+                            a {
+                                display: flex;
+                                gap: 18px;
+                                color: var(--black);
+                                align-items: center;
+                                text-transform: capitalize;
+
+                                .svg_icon {
+                                    img {}
+                                }
+
+                                span {}
+                                .text{
+
+                                }
+
+                                &:hover {
+                                    color: var(--primarry);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .subcategories_list {
+                    display: flex;
+                    flex: 1;
+                    // border: var(--border);
+                    justify-content: space-between;
+
+                    .subcategories {
+                        width: 170px;
+                        padding: 24px 16px;
+
+                        ul {
+                            li {
+                                margin-bottom: 16px;
+
+                                a {
+                                    display: flex;
+                                    gap: 18px;
+                                    color: var(--black);
+                                    align-items: center;
+                                    text-transform: capitalize;
+
+                                    .svg_icon {
+                                        height: 24px;
+                                        width: 24px;
+
+                                        img {}
+
+                                        span {}
+                                    }
+
+                                    &:hover {
+                                        color: var(--primarry);
+                                    }
+                                }
+
+                                .view_all {
+                                    display: flex;
+                                    // width: 75px;
+                                    // height: 48px;
+                                    gap: 0;
+                                    color: var(--primarry);
+                                    padding: 4px 8px;
+                                    .svg_icon{
+                                        background-color: var(--primarry);
+                                    }
+                                }
+                            }
+                        }
+
+                        p {}
+                    }
+
+                    .top_product {
+                        flex: 1; 
+
+                        .close {
+                            text-align: right;
+                            padding-top: 10px;
+                            margin-right: 10px;
+
+                            a {
+                                background-color: var(--primarry);
+                                color: var(--white);
+                                padding: 10px 15px;
+                                border-radius: 5px;
+                                margin-bottom: 3px;
+                                text-transform: uppercase;
+                                text-decoration: .3s;
+                                &:hover{
+                                    background-color: var(--secondary);
+                                }
+                            }
+                        }
+
+                        .nav_product_item {
+                            display: flex;
+                            gap: 16px;
+                            padding: 24px;
+
+                            justify-content: flex-end;
+
+                            .nav_product {
+                                width: 150px;
+                                padding: 8px;
+                                // border: var(--border);   
+                                border-radius: 8px;
+                                background: var(--White, #FFF);
+                                gap: 16px;
+                                box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+                                margin-top: 80px;
+
+                                img {
+                                    margin-bottom: 16px;
+                                }
+
+                                a {
+                                    h4 {
+                                        color: var(--Black, #0C0C0C);
+                                        text-align: center;
+                                        font-size: 16px;
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

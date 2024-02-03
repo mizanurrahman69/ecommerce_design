@@ -1,0 +1,31 @@
+.top_categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
+    gap: 24px;
+    padding: 48px 0px;
+
+    .item {
+        padding: 8px 18px;
+        background-color: var(--white);
+        border-radius: 8px;
+        box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+
+        .img {
+            height: 252px;
+
+            img {
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+
+        .tittle {
+            h3 {
+                font-size: 16px;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
+
+    }
+}

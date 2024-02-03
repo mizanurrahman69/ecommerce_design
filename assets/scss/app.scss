@@ -6,12 +6,16 @@
 
 @import "./components/button";
 @import "./components/common_heading";
+@import "./components/search_modal";
+@import "./components/product";
+@import "./components/sectioon_header_part";
 
 @import "./layouts/container";
 @import "./layouts/header";
 @import "./layouts/navbar.scss";
 @import "./layouts/product_category_jumb_manu.scss";
 @import "./layouts/user_drop_down_actions.scss";
+@import "./layouts/search_item";
 @import "./layouts/header_cart_list";
 @import "./layouts/footer";
 

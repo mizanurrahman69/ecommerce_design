@@ -1,0 +1,32 @@
+// #banner{
+// }
+.banner_content {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+
+    .left {
+        .heading {
+            font-size: 64px;
+            font-weight: 600;
+            color: var(--navy_blue);
+            margin-top: 56px;
+            line-height: normal;
+        }
+        .sub_heading{
+            color: var(--navy_blue); 
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 100px;
+            margin-top: 50px;
+            span{
+                color: var(--secondary); 
+                 
+            }
+        }
+        .banner_btn{
+            padding: 18px 95px;
+        }
+    }
+
+    .right {}
+}

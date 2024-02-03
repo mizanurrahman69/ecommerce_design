@@ -1,0 +1,109 @@
+.search_items {
+    position: absolute;
+    top: 103px;
+    width: 100vw;
+    right: 0;
+    background-color: var(--white);
+    padding: 32px 48px;
+    box-shadow: 0px 10px 10px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid var(--primarry);
+    z-index: 9;
+    width: 808px;
+    height: 500px;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    .top {
+        // border: var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // border: var(--border);
+            width: 490px;
+            padding: 16px;
+            border-radius: 8px;
+            border: 3px solid var(--natural_gray);
+
+            p {
+                color: var(--natural_gray);
+                font-weight: 300;
+            }
+
+            .svg_icon {
+                
+            }
+        }
+
+        .right {
+            .close {
+                text-align: right;
+                padding-top: 10px;
+                margin-right: 10px;
+
+                a {
+                    color: var(--white);
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    margin-bottom: 3px;
+                    text-transform: uppercase;
+                    text-decoration: 1.5s;
+
+                    &:hover {
+                        color: var(--secondary);
+                        transform: rotate(360deg);
+                    }
+
+                    .svg_icon {
+                     
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        gap: 30px;
+
+        .right {
+            display: flex;
+            gap: 30px;
+
+            .product_list {
+
+                .product_list_heading {
+                    margin-bottom: 40px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: normal;
+                }
+
+                ul {
+                    // border: var(--border);
+                    display: block;
+
+                    li {
+                        margin-bottom: 32px;
+
+                        a {
+                            font-size: 18px;
+                            color: var(--black);
+                            font-weight: 300;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.product_item {
+    padding: 8px;
+    background-color: var(--white);
+    border-radius: 8px;
+    position: relative;
+
+    .img {
+        margin-bottom: 12px;
+    }
+
+    .tittle {
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: 300;
+        color: var(--black);
+        margin-bottom: 8px;
+    }
+
+    .discount {
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 300;
+        color: var(--secondary);
+        background-color: #fddbc9;
+        display: inline-block;
+        padding: 4px 6px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        position: absolute;
+        top: 8px;
+        left: 0;
+    }
+
+    .price_area {
+        display: flex;
+        justify-content: space-between;
+
+        .del_price {
+            color: #717171;
+            font-size: 13px;
+            line-height: 23px;
+        }
+
+        .discount_price {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+}

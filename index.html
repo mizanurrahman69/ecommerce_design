@@ -662,8 +662,8 @@
                             <div class="top">
                                 <div class="img">
                                     <a href="#">
-                                        <img x-bind:src="`./assets/images/cart_img/dummy_product/${i.images_no}.png`"
-                                            alt="">
+                                        <img x-bind:id="`p${i}_img_1`"
+                                            src="./assets/images/cart_img/dummy_product/1.png" alt="">
                                     </a>
                                 </div>
                                 <a href="#" class="favourite">
@@ -671,11 +671,11 @@
                                 </a>
                                 <ul>
                                     <ul class="color_list">
-                                        <li x-bind:click="change_product_preview_images(`p${i}.jpg`,`./assets/images/product/1.jpg`)"
+                                        <li @click="change_product_preview_image(`p${i}_img_png`,`./assets/images/cart_img/dummy_product/1.png`)"
                                             style="background-color: red;"></li>
-                                        <li x-bind:click="change_product_preview_images(`p${i}.jpg`,`./assets/images/product/1.jpg`)"
+                                        <li @click="change_product_preview_image(`p${i}_img_png`,`./assets/images/cart_img/dummy_product/2.png`)"
                                             style="background-color: blue;"></li>
-                                        <li x-bind:click="change_product_preview_images(`p${i}.jpg`,`./assets/images/product/1.jpg`)"
+                                        <li @click="change_product_preview_image(`p${i}_img_png`,`./assets/images/cart_img/dummy_product/3.png`)"
                                             style="background-color: darkgray;"></li>
                                     </ul>
                                     <a href="#" class="btn banner_btn btn_v2 add_to_cart_btn">
@@ -868,107 +868,18 @@
 
     <section>
         <div class="container">
-            <div class="watch_content">
-                <div class="img">
-                    <img src="./assets/images/watch/banner.png" alt="">
-                </div>
-                <div class="section_content">
-                    <h2 class="heading">SMART WATCH</h2>
-                    <p class="sec_child">Various designs and brands</p>
-                    <a href="#" class="btn banner_btn btn_v2 view_btn">
-                        <span>view</span>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="blogs_content">
-        <div class="container">
-            <div class="blogs_section">
-                <div class="top">
-                    <div class="section_heading">
-                        <h2>Our Blogs</h2>
-                        <div class="right_side">
-                            <a href="#">
-                                <span>view all</span>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
+            <div class="heighlight_content">
+                <div class="shape"></div>
+                <div class="left">
+                    <div class="l_content">
+                        <h2 class="heading">SMART WATCH</h2>
+                        <p>Various designs and brands</p>
+                        <a class="btn btns btn_v2" href="#">view</a>
                     </div>
                 </div>
-                <div class="bottom">
-                    <div class="left">
-                        <div class="img">
-                            <img src="./assets/images/blogs_img/blogs_img1.jpg.jpeg" alt="">
-                        </div>
-                        <div class="date">
-                            <div class="left">
-                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/calender.svg'); mask-image: 
-                                 url('./assets/images/icons/calender.svg');">
-                                </div>
-                                <p class="dated">August , 8 , 2023</p>
-                            </div>
-                            <div class="right">
-                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/watch.svg'); mask-image: 
-                                 url('./assets/images/icons/watch.svg');">
-                                </div>
-                                <p class="time">3 min read</p>
-                            </div>
-                        </div>
-
-                        <a class="heading" href="./assets/scss/layouts/_product_category_jumb_manu.scss">
-                            <h4>Meta Platforms plans to release free software that...</h4>
-                            <p>The parent company of Facebook, Meta Platforms, is introducing software to help
-                                developers </p>
-                        </a>
-
-                    </div>
-                    <div class="right">
-                        <div class="top">
-                            <div class="img">
-                                <img src="./assets/images/blogs_img/blogs_img2.jpg.jpeg" alt="">
-                            </div>
-                            <div class="section_content">
-                                <h4>8 Things You Probably Didn’t Know About Headphones</h4>
-                                <p>Owning a headphone could mean a different thing for different people. For some, it
-                                    act as a fashion statement. It’s easy to spot these people, the headphone are almost
-                                    always just hanging around the neck.</p>
-                                <div class="date">
-                                    <div class="left">
-                                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/watch.svg'); mask-image: 
-                                          url('./assets/images/icons/watch.svg');">
-                                        </div>
-                                        <p>August , 8 , 2023</p>
-                                    </div>
-                                    <div class="right">
-                                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/chat.svg'); mask-image: 
-                                            url('./assets/images/icons/chat.svg');">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="top bottom">
-                            <div class="img">
-                                <img src="./assets/images/blogs_img/blogs_img2.jpg.jpeg" alt="">
-                            </div>
-                            <div class="section_content">
-                                <h4>8 Things You Probably Didn’t Know About Headphones</h4>
-                                <p>Owning a headphone could mean a different thing for different people. For some, it
-                                    act as a fashion statement. It’s easy to spot these people, the headphone are almost
-                                    always just hanging around the neck.</p>
-                                <div class="date">
-                                    <div class="left">
-                                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/watch.svg'); mask-image: 
-                                          url('./assets/images/icons/watch.svg');">
-                                        </div>
-                                        <p>August , 8 , 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="right">
+                    <div class="img">
+                        <img src="./assets/images/watch/1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -977,44 +888,179 @@
 
     <section>
         <div class="container">
-            <div class="our_service">
-                <ul>
-                    <li>
-                        <a class="link" href="">
-                            <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/b_assets.svg'); mask-image: 
-                                 url('./assets/images/icons/b_assets.svg');">
-                            </div>
-                            <h4 class="heading">Latest and Greatest Tech</h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="link" href="">
-                            <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/b_assets.svg'); mask-image: 
-                                 url('./assets/images/icons/b_assets.svg');">
-                            </div>
-                            <h4 class="heading">Guarantee</h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="link" href="">
-                            <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/b_assets.svg'); mask-image: 
-                                 url('./assets/images/icons/b_assets.svg');">
-                            </div>
-                            <h4 class="heading">Free Shipping over 1000$</h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="link" href="">
-                            <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/b_assets.svg'); mask-image: 
-                                 url('./assets/images/icons/b_assets.svg');">
-                            </div>
-                            <h4 class="heading">24/7 Support</h4>
-                        </a>
-                    </li>
-                </ul>
+            <div class="section_heading">
+                <h2>Our Blogs</h2>
+                <div class="right_side">
+                    <a href="#">
+                        <span>view all</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
             </div>
+            <div x-data="" class="blog_list">
+                <template x-for="i in 4" x-key="i">
+                    <div class="blog_item">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/blogs_img/blogs_img1.jpg.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="mid">
+                            <div class="left mid_item">
+                                <a href="">
+                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/calender.svg'); mask-image: 
+                                         url('./assets/images/icons/calender.svg');">
+                                    </div>
+                                    <span>August, 8, 2023</span>
+                                </a>
+                            </div>
+                            <div class="right mid_item">
+                                <a href="">
+                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/watch.svg'); mask-image: 
+                                     url('./assets/images/icons/watch.svg');">
+                                    </div>
+                                    <span>3 min read</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <h3 class="heading">Meta Platforms plans to release free software that...</h3>
+                            <p>The parent company of Facebook, Meta Platforms, is introducing software to
+                                help
+                                developers
+                            </p>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <ul class="our_features">
+                <li>
+                    <a class="link" href="">
+                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/b_assets.svg'); mask-image: 
+                                 url('./assets/images/icons/b_assets.svg');">
+                        </div>
+                        <h4 class="heading">Latest and Greatest Tech</h4>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="">
+                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/b_assets.svg'); mask-image: 
+                                 url('./assets/images/icons/b_assets.svg');">
+                        </div>
+                        <h4 class="heading">Guarantee</h4>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="">
+                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/b_assets.svg'); mask-image: 
+                                 url('./assets/images/icons/b_assets.svg');">
+                        </div>
+                        <h4 class="heading">Free Shipping over 1000$</h4>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="">
+                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/b_assets.svg'); mask-image: 
+                                 url('./assets/images/icons/b_assets.svg');">
+                        </div>
+                        <h4 class="heading">24/7 Support</h4>
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </section>
+
+    <footer>
+        <div class="Top">
+            <div class="container">
+                <div class="footer_top_content">
+                    <div class="footer_item">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href=""></a>about us</li>
+                            <li><a href=""></a>blog</li>
+                            <li><a href=""></a>returns</li>
+                            <li><a href=""></a>order status</li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>info</h3>
+                        <ul>
+                            <li><a href=""></a>How it works?</li>
+                            <li><a href=""></a>our promises</li>
+                            <li><a href=""></a>FAQ</li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>Contact us</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-location-pin"></i>
+                                    <span>123 Main Street, Anytown,USA</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-phone"></i>
+                                    <span>+1 (555) 123-4567</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-envelope"></i>
+                                    <span>TechHeimSupport@gmail.com</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>Sign up for News and updates</h3>
+                        <ul>
+                            <form action="" class="subscribe_form">
+                                <i class="fa fa-user icon"></i>
+                                <input placeholder="E-mail Address" class="input" type="text">
+                                <button class="button">
+                                    <i class="fa fa-angle-right"></i>
+                                </button>
+                            </form>
+                        </ul>
+                        <ul class="social_icons">
+                            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <div class="footer_bottom_content">
+                    <div class="left">
+                        <p>&copy; 2023 Tech Heim.</p>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><a href="">cookie settings</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms and Conditions</a></li>
+                            <li><a href="">Imprint</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 
     <script>
         $(document).ready(function () {

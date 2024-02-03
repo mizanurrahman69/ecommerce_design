@@ -1,0 +1,56 @@
+.heighlight_content {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 30px;
+    background-color: #223949;
+    margin-bottom: 60px;
+    overflow: hidden;
+    padding: 40px 60px;
+    position: relative;
+
+    .shape {
+        position: absolute;
+        width: 508px;
+        height: 100%;
+        border: 1px solid white;
+        right: 0;
+        top: 0;
+        background-color: var(--secondary);
+        clip-path: ellipse(90% 99% at 100% 51%);
+    }
+
+    .left {
+        display: grid;
+        align-content: center;
+
+        .l_content {
+            color: var(--white);
+            .heading {
+                font-size: 44px;
+                line-height: 54px;
+            }
+
+            p {
+                font-size: 24px;
+                line-height: 34px;
+                margin-top: 16px;
+                margin-bottom: 40px;
+            }
+
+            .btns {
+                color: #223949;
+            }
+        }
+    }
+
+    .right {
+        .img {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+
+            img {}
+        }
+
+    }
+}

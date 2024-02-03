@@ -1,0 +1,30 @@
+.our_features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 100px;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        .link {
+            color: var(--Black);
+            gap: 15px;
+            display: flex;
+            align-items: center;
+
+            .svg_icon {
+                min-height: 33px;
+                min-width: 40px;
+            }
+
+            .heading {
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 300;
+            }
+        }
+    }
+
+}

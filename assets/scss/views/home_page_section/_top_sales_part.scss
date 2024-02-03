@@ -1,0 +1,102 @@
+.top_sales_part {
+    background-image: url(../images/sales/shape.png);
+    display: grid;
+    grid-template-columns: 290px 1000px;
+    gap: 20px;
+    background-color: var(--navy_blue);
+    margin-bottom: 48px;
+    border-radius: 8px;
+    background-position: -128px -87px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 384px;
+    background-blend-mode: overlay;
+    overflow-x: hidden;
+
+    .left {
+        color: var(--white);
+        text-align: center;
+
+        .link {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-size: 16px;
+            margin-bottom: 62px;
+        }
+
+        .heading {
+            font-size: 24px;
+            margin-top: 62px;
+            margin-bottom: 8px;
+        }
+
+        .sub_heading {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 88px;
+        }
+
+        .link {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-size: 16px;
+            margin-bottom: 62px;
+
+            .svg_icon {
+                background-color: var(--white);
+            }
+        }
+    }
+
+    .right {
+        padding-top: 56px;
+
+        .product_list {
+
+            // display: grid;
+            // grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
+            // gap: 24px;
+            .img {
+                height: 146px;
+
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+            margin: 8px 0px;
+
+            .left {
+                .svg_icon {
+                    background-color: var(--white);
+                    min-height: 29px;
+                    min-width: 29px;
+                }
+            }
+        }
+
+        .owl-carousel .owl-nav.disabled {
+            display: block;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+
+            .svg_icon {
+                background-color: #fff;
+                width: 29px;
+                height: 29px;
+            }
+        }
+    }
+}

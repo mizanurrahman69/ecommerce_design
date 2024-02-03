@@ -1,0 +1,192 @@
+#search_modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: .3s;
+    transform: scale(0.5);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        z-index: 99;
+    }
+
+    .search_overlay {
+        background: rgba(0, 0, 0, .4);
+        height: 100%;
+        position: relative;
+
+        .search_card {
+            width: 808px;
+            height: 490px;
+            background-color: var(--white);
+            border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 32px 50px 60px;
+
+            .top {
+                margin-bottom: 48px;
+
+                .search_form {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .search_input {
+                        border: 1px solid var(--black);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex: 1;
+                        border-radius: 8px;
+
+                        .input {
+                            flex: 1;
+                            padding: 16px;
+                            font-size: 14px;
+                            border: 0;
+                            outline: 0;
+                        }
+
+                        .submit_button {
+                            background: transparent;
+                            border: 0;
+                            padding-right: 15px;
+                        }
+
+                    }
+
+                    .icon_part {
+                        width: 170px;
+                        display: flex;
+                        justify-content: flex-end;
+                        &:hover{
+                            color: var(--primarry);
+                         }
+                        .closed {
+                            
+                        }
+                     
+                    }
+                }
+            }
+
+            .bottom {
+                .suggested_keyword {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 50px;
+
+                    .keyword_group {
+                        .heading {
+                            margin-bottom: 40px;
+                            font-size: 20px;
+                            font-weight: 600px;
+                        }
+
+                        .link_list {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            column-gap: 30px;
+                            row-gap: 30px;
+
+                            li {
+                                a {
+                                    font-size: 18px;
+                                    color: var(--black);
+                                    text-transform: capitalize;
+                                    font-weight: 300;
+                                    transition-duration: .3s;
+
+                                    &:hover {
+                                        color: var(--primarry);
+                                        text-decoration: solid;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .suggest_result {
+                    display: flex;
+                    gap: 30px;
+
+                    .left {
+                        width: 250px;
+
+                        .search_at_glance {
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #444;
+                            margin-bottom: 40px;
+                        }
+
+                        .result_list {
+                            ul {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                font-size: 18px;
+                                column-gap: 30px;
+                                row-gap: 8px;
+
+                                li {
+                                    a {
+                                        .search_match {
+                                            color: #888;
+                                        }
+
+                                        color: var(--black);
+
+                                        &:hover {
+                                            color: var(--primarry);
+                                        }
+                                    }
+                                }
+
+                                .more {
+                                    margin-top: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    .right {
+                        flex: 1;
+
+                        .match_products {
+                            .product_item {
+                                display: flex;
+                                gap: 20px;
+
+                                .nav_product {
+                                    box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+                                    padding: 12px;
+                                }
+
+                                .img {
+                                    height: 80px;
+                                }
+                            }
+
+                            .product_tittle {
+                                font-size: 10px;
+                                line-height: 16px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
