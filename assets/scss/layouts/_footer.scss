@@ -10,6 +10,11 @@ footer {
             justify-content: space-between;
             gap: 30px;
 
+            @include custom_media(0px, 400px) {
+                grid-template-columns: repeat(auto-fit, 270px);
+
+            }
+
             .footer_item {
                 h3 {
                     font-size: 16px;
@@ -82,6 +87,13 @@ footer {
                     display: flex;
                     justify-content: flex-end;
                     gap: 50px;
+
+                    @include custom_media(0px, 400px) {
+                        gap: 12px;
+                        flex-wrap: wrap;
+                        text-align: center;
+                        justify-content: center;
+                    }
 
                     li {
                         a {

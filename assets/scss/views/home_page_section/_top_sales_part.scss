@@ -13,6 +13,11 @@
     background-blend-mode: overlay;
     overflow-x: hidden;
 
+    @include xs {
+        grid-template-columns: 1fr;
+        display: block;
+    }
+
     .left {
         color: var(--white);
         text-align: center;
@@ -55,11 +60,11 @@
     .right {
         padding-top: 56px;
 
+        @include xs {
+           padding-left: 20px;
+        }
         .product_list {
 
-            // display: grid;
-            // grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
-            // gap: 24px;
             .img {
                 height: 146px;
 
@@ -83,6 +88,18 @@
                     min-width: 29px;
                 }
             }
+            @include xs{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 5px;
+                .svg_icon {
+                    background-color: #fff;
+                    width: 29px;
+                    height: 29px;
+                }
+            }
+
         }
 
         .owl-carousel .owl-nav.disabled {
@@ -90,7 +107,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: 10px;
+            gap: 5px;
 
             .svg_icon {
                 background-color: #fff;

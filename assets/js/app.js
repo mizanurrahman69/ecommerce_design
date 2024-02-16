@@ -16,58 +16,58 @@ var header_cart_products = [{
     },
 ];
 var jumbo_manu_product = [{
-        image: './assets/images/product/1.jpg',
+        image: `./assets/images/product/1.jpg`,
         name: 'MacBook Pro M2 MNEJ3 2022 LLA ',
         price: `433.00`,
     },
     {
-        image: './assets/images/product/2.jpg',
+        image: `./assets/images/product/2.jpg`,
         name: 'Inateck 12.3-13 Inch MacBook Case Sleeve ',
         price: `63.26`,
     },
     {
-        image: './assets/images/product/3.jpg',
+        image: `./assets/images/product/3.jpg`,
         name: 'laptop privacy screen for 13inc',
         price: `500.00`,
     },
     {
-        image: './assets/images/product/4.jpg',
-        name: 'laptop privacy screen for 13inc',
+        image: `./assets/images/product/4.jpg`,
+        name: `laptop privacy screen for 13inc`,
         price: `500.00`,
     },
 ];
 
-
+// product_list
 var product_list = [{
-        images_no: 1,
-        name: 'Iphone 14 promax 256 gig',
+        img_no: 1,
+        name: `Iphone 14 promax 256 gig`,
         price: `930.90`,
         del_price: `1200`,
         rating: `4.5`,
     },
     {
-        images_no: 2,
+        img_no: 2,
         name: 'Blackmagic Design Pocket)',
         price: `2535.00`,
         del_price: `3200`,
         rating: `4.8`,
     },
     {
-        images_no: 3,
+        img_no: 5,
         name: 'SAMSUNG Galaxy S23 Ultra',
         price: `3535.00`,
         del_price: `4200`,
         rating: `4.7`,
     },
     {
-        images_no: 1,
+        img_no: 7,
         name: 'Iphone 14 promax 256 gig',
         price: `930.90`,
         del_price: `1000`,
         rating: `4.5`,
     },
     {
-        images_no: 3,
+        img_no: 3,
         name: 'Blackmagic Design Pocket)',
         price: `2535.00`,
         del_price: `3200`,
@@ -98,10 +98,6 @@ var top_categories = [{
     },
 
 ];
-
-
-
-
 
 var product_categories = [{
         icon: './assets/images/icons/mobile.svg',
@@ -168,7 +164,7 @@ function increment_cart(price_target) {
     let input = event.currentTarget.previousElementSibling;
     input.value = parseInt(input.value) + 1;
 
-    let price = document.getElementById('price_1');
+    let price = document.getElementById(price_target);
     price.innerText = parseFloat(price.dataset.price) * input.value
 }
 
@@ -177,10 +173,18 @@ function decrement_cart(price_target) {
     let input = event.currentTarget.nextElementSibling;
     input.value = parseInt(input.value) - 1;
 
-    let price = document.getElementById('price_1');
+    let price = document.getElementById(price_target);
     price.innerText = parseFloat(price.dataset.price) * input.value
 }
 
-function change_product_preview_image(target, image_src){
+function change_product_preview_image(target, image_src) {
     document.getElementById(target).src = image_src;
+}
+
+
+function tooggle_nav() {
+    let nav_bar_manu = document.getElementById('nav_bar_manu');
+    if (nav_bar_manu) {
+        nav_bar_manu.classList.toggle('active');
+    }
 }

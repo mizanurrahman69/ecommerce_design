@@ -4,6 +4,10 @@
     display: grid;
     grid-template-columns: 500px 1fr;
 
+    @include xs {
+        display: block;
+    }
+
     .left {
         .heading {
             font-size: 64px;
@@ -11,22 +15,48 @@
             color: var(--navy_blue);
             margin-top: 56px;
             line-height: normal;
+
+            @include xs {
+                font-size: 45px;
+                margin-top: 50px;
+                line-height: 50px;
+            }
         }
-        .sub_heading{
-            color: var(--navy_blue); 
+
+        .sub_heading {
+            color: var(--navy_blue);
             font-size: 32px;
             font-weight: 500;
             margin-bottom: 100px;
             margin-top: 50px;
-            span{
-                color: var(--secondary); 
-                 
+
+            @include xs {
+                margin-bottom: 27px;
+                margin-top: 58px;
+            }
+
+            span {
+                color: var(--secondary);
+
             }
         }
-        .banner_btn{
+
+        .banner_btn {
             padding: 18px 95px;
+            @include xs{
+                padding: 20px 40px
+            }
         }
     }
 
-    .right {}
+    .right {
+        @include xs{
+            padding-top: 100px;
+        }
+        .img {
+            padding: 10px;
+
+            img {}
+        }
+    }
 }

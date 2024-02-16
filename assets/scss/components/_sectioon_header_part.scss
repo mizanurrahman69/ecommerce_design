@@ -5,10 +5,15 @@
      border-bottom: 1px solid var(--black);
      padding-bottom: 18px;
      margin-bottom: 32px;
-
+     @include xs{
+       padding-bottom: 0;
+         }
      h2 {
          font-size: 32px;
          font-weight: 500;
+         @include xs{
+        font-size: 22px;
+         }
      }
 
      .right_side {

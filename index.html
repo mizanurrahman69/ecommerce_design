@@ -68,44 +68,44 @@
 </head>
 
 <body>
-    <!-- <div x-data="{ open: false }">
-        <div x-data="{ label: 'mizan:' }">
-            <span x-text="label"></span>
-            <span x-show="open">
-                nipom
-            </span>
-        </div>
-        <button @click="open=!open">Click Me</button>
-    </div>
-
-    <div x-data="{show: false}">
-        <button @click="show=!show">hello</button>
-        <h1 x-show="show">hello from mizan</h1>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <hr> -->
-
-    <header>
+    <header id="header">
         <nav>
             <div class="container">
                 <div class="nav_body">
+                    <div class="nav_toggler" onclick="tooggle_nav()">
+                        <button>
+                            <i class="fa fa-align-left"></i>
+                        </button>
+                    </div>
                     <div class="logo">
                         <img src="./assets/images/icons/assets.svg" alt="header_logo">
                     </div>
-                    <div class="manu">
-                        <ul>
-                            <li><a href="#">home</a></li>
-                            <li>
-                                <a href="#" onclick="product_category_jumbo_manu.classList.toggle('active')">product</a>
-                            </li>
-                            </li>
-                            <li><a href="#">blog</a></li>
-                            <li><a href="#">faq</a></li>
-                            <li><a href="#">contact us</a></li>
-                        </ul>
+                    <div class="manu" id="nav_bar_manu">
+                        <div class="overlay">
+                            <ul>
+                                <li class="nav_logo">
+                                    <a href="#">
+                                        <img src="./assets/images/icons/assets.svg" alt="header_logo">
+                                    </a>
+                                </li>
+
+                                <li class="nav_close" onclick="tooggle_nav()">
+                                    <a href="#">
+                                        <i class="fa fa-close"></i>
+                                    </a>
+                                </li>
+
+                                <li><a href="#">home</a></li>
+                                <li>
+                                    <a href="#"
+                                        onclick="product_category_jumbo_manu.classList.toggle('active')">product</a>
+                                </li>
+                                </li>
+                                <li><a href="#">blog</a></li>
+                                <li><a href="#">faq</a></li>
+                                <li><a href="#">contact us</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="action_manues">
                         <ul>
@@ -477,7 +477,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="top_categories">
         <div class="container">
             <div x-data="{top_categories}" class="top_categories">
                 <template x-for="(i, index) in top_categories">
@@ -504,7 +504,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="top_sales_part">
         <div class="container">
             <div class="top_sales_part">
                 <div class="left">
@@ -627,8 +627,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navigation top_sales_product_slide_prev">
-                        <div class="left">
+                    <div class="navigation">
+                        <div class="left top_sales_product_slide_prev">
                             <div class="svg_icon" style=" -webkit-mask-image: url('./assets/images/icons/search.svg');
                             mask-image: url('./assets/images/icons/navigation_left.svg');">
                             </div>
@@ -644,11 +644,11 @@
         </div>
     </section>
 
-    <section>
+    <section id="product_list">
         <div class="container">
             <div class="product_list">
                 <div class="section_heading">
-                    <h2>New Product</h2>
+                    <h2>Best Sellers</h2>
                     <div class="right_side">
                         <a href="#">
                             <span>view all</span>
@@ -656,32 +656,31 @@
                         </a>
                     </div>
                 </div>
-                <div x-data="{product_list}" class="product_list2">
+                <div x-data="" class="product_list product_list2">
                     <template x-for="(i, index) in product_list">
                         <div class="product_item product_item_2">
                             <div class="top">
                                 <div class="img">
                                     <a href="#">
                                         <img x-bind:id="`p${i}_img_1`"
-                                            src="./assets/images/cart_img/dummy_product/1.png" alt="">
+                                            x-bind:src="`./assets/images/cart_img/dummy_product/${i}.jpg`" alt="">
                                     </a>
                                 </div>
                                 <a href="#" class="favourite">
                                     <i class="far fa-heart"></i>
                                 </a>
-                                <ul>
-                                    <ul class="color_list">
-                                        <li @click="change_product_preview_image(`p${i}_img_png`,`./assets/images/cart_img/dummy_product/1.png`)"
-                                            style="background-color: red;"></li>
-                                        <li @click="change_product_preview_image(`p${i}_img_png`,`./assets/images/cart_img/dummy_product/2.png`)"
-                                            style="background-color: blue;"></li>
-                                        <li @click="change_product_preview_image(`p${i}_img_png`,`./assets/images/cart_img/dummy_product/3.png`)"
-                                            style="background-color: darkgray;"></li>
-                                    </ul>
-                                    <a href="#" class="btn banner_btn btn_v2 add_to_cart_btn">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span>add to cart</span>
-                                    </a>
+                                <ul class="color_list">
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/cart_img/dummy_product/${i+3}.jpg`)"
+                                        style="background-color: red;"></li>
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/cart_img/dummy_product/${i+4}.jpg`)"
+                                        style="background-color: rgb(27, 39, 60);"></li>
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/cart_img/dummy_product/${i+5}.jpg`)"
+                                        style="background-color: rgb(92, 81, 34);"></li>
+                                </ul>
+                                <a href="#" class="btn banner_btn btn_v2 add_to_cart_btn">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>add to cart</span>
+                                </a>
                             </div>
                             <div class="devider"></div>
                             <div class="bottom">
@@ -766,7 +765,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="product_list2">
         <div class="container">
             <div class="product_list">
                 <div class="section_heading">
@@ -784,26 +783,25 @@
                             <div class="top">
                                 <div class="img">
                                     <a href="#">
-                                        <img x-bind:src="`./assets/images/cart_img/dummy_product/${i.images_no}.png`"
-                                            alt="">
+                                        <img x-bind:id="`p${i}_img_1`"
+                                            x-bind:src="`./assets/images/cart_img/dummy_product/${i}.jpg`" alt="">
                                     </a>
                                 </div>
                                 <a href="#" class="favourite">
                                     <i class="far fa-heart"></i>
                                 </a>
-                                <ul>
-                                    <ul class="color_list">
-                                        <li click="change_product_preview_images(`p${i}.jpg`),src=`./assets/images/product/1.jpg`"
-                                            style="background-color: red;"></li>
-                                        <li click="change_product_preview_images(`p${i}_img_1`),src=`./assets/images/product/1.jpg`"
-                                            style="background-color: blue;"></li>
-                                        <li click="(`p${i}_img_1`),src=`./assets/images/product/1.jpg`"
-                                            style="background-color: darkgray;"></li>
-                                    </ul>
-                                    <a href="#" class="btn banner_btn btn_v2 add_to_cart_btn">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span>add to cart</span>
-                                    </a>
+                                <ul class="color_list">
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/dummy_product/${i+3}.jpg`)"
+                                        style="background-color: red;"></li>
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/dummy_product/${i+4}.jpg`)"
+                                        style="background-color: rgb(27, 39, 60);"></li>
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/dummy_product/${i+5}.jpg`)"
+                                        style="background-color: rgb(92, 81, 34);"></li>
+                                </ul>
+                                <a href="#" class="btn banner_btn btn_v2 add_to_cart_btn">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>add to cart</span>
+                                </a>
                             </div>
                             <div class="devider"></div>
                             <div class="bottom">
@@ -866,7 +864,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="heighlight_content">
         <div class="container">
             <div class="heighlight_content">
                 <div class="shape"></div>
@@ -886,7 +884,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="Blog_list">
         <div class="container">
             <div class="section_heading">
                 <h2>Our Blogs</h2>
@@ -936,7 +934,7 @@
             </div>
     </section>
 
-    <section>
+    <section id="our_features_part">
         <div class="container">
             <ul class="our_features">
                 <li>
@@ -976,7 +974,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="Top">
             <div class="container">
                 <div class="footer_top_content">
@@ -1071,8 +1069,20 @@
                 autoplay: false,
                 autoplayhoverfalse: true,
                 nav: true,
-                navText: [$('.top_sales_product_slide_prev'), $('.top_sales_product_slide_next')]
-
+                navText: [$('.top_sales_product_slide_prev'), $('.top_sales_product_slide_next')],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    // breakpoint from 480 up
+                    480: {
+                        items: 3,
+                    },
+                    // breakpoint from 768 up
+                    768: {
+                        items: 5,
+                    }
+                }
             });
             $(".brand_slide").owlCarousel({
                 items: 8,
@@ -1082,6 +1092,23 @@
                 autoplayhoverfalse: true,
                 dosts: true,
                 nav: false,
+
+
+                responsive: {
+                    0: {
+                        items: 3,
+                    },
+                    // breakpoint from 480 up
+                    480: {
+                        items: 6,
+                    },
+                    // breakpoint from 768 up
+                    768: {
+
+                    }
+
+                }
+
             });
         });
     </script>

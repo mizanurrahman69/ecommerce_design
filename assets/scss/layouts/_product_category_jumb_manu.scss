@@ -1,6 +1,6 @@
 #product_category_jumbo_manu {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>), lightgray 0px 0.701px / 100% 426.035% no-repeat;
-    height: calc(100vh - 104px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.486) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>), lightgray 0px 0.701px / 100% 426.035% no-repeat;
+    height: calc(100vh - 100px);
     width: 100vw;
     position: fixed;
     opacity: 0;
@@ -166,6 +166,50 @@
                                         font-weight: normal;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include custom_media(0px, 991.9px) {
+        //responsive*/
+        z-index: 9999;
+
+        .product_list_manu {
+            .overlay {
+                max-width: 400px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+
+                .product_categories {
+                    flex-direction: column;
+
+                    .category_list {
+                        padding-bottom: 0;
+                        border-right: 0;
+                    }
+
+                    .subcategories_list {
+                        flex-direction: column;
+                        flex: unset;
+
+                        .subcategories {
+                            padding-top: 0;
+                        }
+
+                        .top_product {
+                            .close {
+                                text-align: center;
+                                margin-left: 15px;
+                                margin-bottom: 15px;
+                            }
+
+                            .nav_product_item {
+                                display: none;
                             }
                         }
                     }

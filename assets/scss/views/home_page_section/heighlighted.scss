@@ -8,6 +8,11 @@
     padding: 40px 60px;
     position: relative;
 
+    @include xs {
+        grid-template-columns: 1fr;
+        padding: 20px 30px;
+    }
+
     .shape {
         position: absolute;
         width: 508px;
@@ -17,6 +22,15 @@
         top: 0;
         background-color: var(--secondary);
         clip-path: ellipse(90% 99% at 100% 51%);
+
+        @include xs {
+            width: 100%;
+            height: calc(100% + 100px);
+            right: 0;
+            top: unset;
+            transform: rotate(90deg);
+            bottom: -50%;
+        }
     }
 
     .left {
@@ -25,9 +39,19 @@
 
         .l_content {
             color: var(--white);
+
+            @include xs {
+                text-align: center;
+            }
+
             .heading {
                 font-size: 44px;
                 line-height: 54px;
+
+                @include xs {
+                    font-size: 25px;
+                    line-height: 23px;
+                }
             }
 
             p {
@@ -39,6 +63,7 @@
 
             .btns {
                 color: #223949;
+                padding: 10px 20px;
             }
         }
     }

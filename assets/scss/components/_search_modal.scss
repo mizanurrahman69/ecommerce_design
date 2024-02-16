@@ -31,7 +31,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 32px 50px 60px;
-
+            @include xs() {
+                width: calc(100% - 31px);
+                padding: 20px 10px;
+                left: calc(50% - 8px);
+            }
+            
+            @include sm() {
+                width: calc(100% - 31px);
+                padding: 20px 10px;
+                left: calc(50% - 8px);
+            }
             .top {
                 margin-bottom: 48px;
 
@@ -80,6 +90,14 @@
             }
 
             .bottom {
+                @include xs() {
+                    height: 359px;
+                    overflow-y: scroll;
+                }
+                @include sm() {
+                    height: 359px;
+                    height: 359px;
+                }
                 .suggested_keyword {
                     display: flex;
                     flex-wrap: wrap;
@@ -120,7 +138,9 @@
                 .suggest_result {
                     display: flex;
                     gap: 30px;
-
+                    @include xs(){
+                        flex-direction: column;
+                    }
                     .left {
                         width: 250px;
 
@@ -164,6 +184,9 @@
                         flex: 1;
 
                         .match_products {
+                            @include xs(){
+                                display: none;
+                            }
                             .product_item {
                                 display: flex;
                                 gap: 20px;
