@@ -33,8 +33,18 @@
         @content();
     }
 }
+
 @mixin custom_media($min, $max) {
     @media (min-width: $min) and (max-width: $max) {
         @content();
     }
+}
+
+
+#header,
+#product_category_jumbo_manu,
+#search_modal,
+#banner,
+#top_categories{
+    display: none;
 }

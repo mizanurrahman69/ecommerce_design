@@ -5,35 +5,51 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(248px, 248px));
     gap: 24px;
-    @include xs{
-        grid-template-columns: 1fr;
+    padding-bottom: 48px;
 
+    @include xs() {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
+
+    @include sm() {
+        grid-template-columns: repeat(auto-fit, minmax(95px, 226px));
+        justify-content: center;
+    }
+
+    @include md() {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    @include lg() {
+        grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+    }
+
     .product_item_2 {
         max-width: 255px;
         box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
         padding: 16px;
         display: grid;
-        margin-bottom: 48px;
-        @include xs{
+
+        @include xs {
             max-width: unset;
         }
+
         .top {
             position: relative;
-            display: flex;
-            justify-content: center;
             overflow: hidden;
 
             .img {
                 width: 193px;
                 height: 181px;
-                display: flex;
-                align-items: center;
-                img {
-                    transition-duration: .3s;
+                // display: flex;
+                // align-items: center;
 
-                    a {
-                        display: block;
+                a {
+                    display: block;
+
+                    img {
+                        transition-duration: .3s;
                     }
                 }
             }
@@ -44,7 +60,6 @@
                 left: -25px;
                 font-size: 24px;
                 z-index: 9;
-                transition-duration: .3s;
             }
 
             .color_list {
@@ -60,7 +75,6 @@
                     border-radius: 50%;
                     margin-bottom: 3px;
                     cursor: pointer;
-
                 }
             }
 
@@ -70,7 +84,6 @@
                 left: 50%;
                 bottom: -45px;
                 text-wrap: nowrap;
-                transition-duration: .3s;
             }
         }
 
@@ -90,7 +103,7 @@
 
             .tittle {
                 a {
-                    display: inline-block;
+                    display: block;
 
                     h3 {
                         font-size: 16px;
@@ -117,17 +130,18 @@
                 .img {
                     a {
                         img {
-                            transform: scale(1.1);
+                            transform: scale(1.2);
                         }
                     }
                 }
 
                 .favourite {
                     left: 0;
+                    color: red;
                 }
 
                 .add_to_cart_btn {
-                    bottom: 0;
+                    bottom: 10px;
                 }
             }
 

@@ -10,7 +10,7 @@
     }
 
     @include sm() {
-        width: calc(576px - 30px);
+        width: calc(576px - 50px);
     }
 
     @include md() {

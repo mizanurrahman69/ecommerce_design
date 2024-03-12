@@ -4,9 +4,13 @@
     justify-content: space-between;
     gap: 25px;
     padding-bottom: 90px;
-@include custom_media(0px, 400px){
-    grid-template-columns: repeat(auto-fit, minmax(270px, 300px));
-}
+
+    @include custom_media(0px, 991.9px) {
+        justify-content: center;
+
+        grid-template-columns: repeat(auto-fit, minmax(270px, 300px));
+    }
+
     .blog_item {
         border-radius: 8px;
         // overflow: hidden;
@@ -16,7 +20,6 @@
             margin-bottom: 8px;
             height: 210px;
             // .img {
-
             //     img {}
             // }
         }

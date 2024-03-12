@@ -12,6 +12,10 @@
         grid-template-columns: 1fr;
         padding: 20px 30px;
     }
+    @include sm {
+        grid-template-columns: 1fr;
+        padding: 20px 30px;
+    }
 
     .shape {
         position: absolute;
@@ -31,6 +35,15 @@
             transform: rotate(90deg);
             bottom: -50%;
         }
+        @include sm {
+            width: 100%;
+            height: calc(100% + 100px);
+            right: 0;
+            top: unset;
+            transform: rotate(58deg);
+            bottom: -41%;
+            left: 62px;
+        }
     }
 
     .left {
@@ -41,6 +54,9 @@
             color: var(--white);
 
             @include xs {
+                text-align: center;
+            }
+            @include sm {
                 text-align: center;
             }
 

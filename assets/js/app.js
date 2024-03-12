@@ -39,35 +39,35 @@ var jumbo_manu_product = [{
 
 // product_list
 var product_list = [{
-        img_no: 1,
+        image: `./assets/images/cart_img/dummy_product/4.jpg`,
         name: `Iphone 14 promax 256 gig`,
         price: `930.90`,
         del_price: `1200`,
         rating: `4.5`,
     },
     {
-        img_no: 2,
+        image: `./assets/images/cart_img/dummy_product/4.jpg`,
         name: 'Blackmagic Design Pocket)',
         price: `2535.00`,
         del_price: `3200`,
         rating: `4.8`,
     },
     {
-        img_no: 5,
+        image: `./assets/images/cart_img/dummy_product/4.jpg`,
         name: 'SAMSUNG Galaxy S23 Ultra',
         price: `3535.00`,
         del_price: `4200`,
         rating: `4.7`,
     },
     {
-        img_no: 7,
+        image: `./assets/images/cart_img/dummy_product/4.jpg`,
         name: 'Iphone 14 promax 256 gig',
         price: `930.90`,
         del_price: `1000`,
         rating: `4.5`,
     },
     {
-        img_no: 3,
+        image: `./assets/images/cart_img/dummy_product/4.jpg`,
         name: 'Blackmagic Design Pocket)',
         price: `2535.00`,
         del_price: `3200`,

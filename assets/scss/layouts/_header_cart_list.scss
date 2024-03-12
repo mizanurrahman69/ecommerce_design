@@ -17,12 +17,18 @@
     transition-duration: .3s;
     transform: scale(0);
     opacity: 0;
+
     &.active {
         display: block;
         visibility: visible;
         transform: scale(1);
         opacity: 1;
 
+    }
+
+    @include custom_media(0px, 991.9px) {
+        width: calc(100vw - 11vw);
+        right: calc(0px - 49px);
     }
 
     .top {
@@ -54,12 +60,29 @@
                 gap: 26px;
                 align-items: center;
 
+                @include xs {
+                    flex-direction: column;
+                }
+
+                @include sm {
+                    flex-direction: column;
+                }
+
+
                 .img {
                     width: 145px;
                 }
 
                 .content {
                     width: calc(100% - 167px);
+
+                    @include xs {
+                        width: 100%;
+                    }
+
+                    @include sm {
+                        width: 100%;
+                    }
 
                     .product_name,
                     .size {
