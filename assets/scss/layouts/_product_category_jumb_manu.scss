@@ -6,6 +6,11 @@
     opacity: 0;
     visibility: hidden;
     top: 103px;
+
+    @include lg {
+        margin-top: 0;
+    }
+
     transition-duration: .3s;
     transform: scale(0);
 
@@ -141,8 +146,9 @@
                             display: flex;
                             gap: 16px;
                             padding: 24px;
-
                             justify-content: flex-end;
+
+
 
                             .nav_product {
                                 width: 150px;
@@ -154,6 +160,12 @@
                                 box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
                                 margin-top: 80px;
 
+
+                                @include lg {
+                                    width: 127px;
+                                }
+
+
                                 img {
                                     margin-bottom: 16px;
                                 }
@@ -164,6 +176,11 @@
                                         text-align: center;
                                         font-size: 16px;
                                         font-weight: normal;
+
+                                        @include lg {
+                                            font-size: 14px;
+                                            line-height: 24px;
+                                        }
                                     }
                                 }
                             }
@@ -180,7 +197,7 @@
 
         .product_list_manu {
             .overlay {
-                max-width: 400px;
+                max-width: 450px;
                 width: 100%;
                 position: absolute;
                 left: 0;

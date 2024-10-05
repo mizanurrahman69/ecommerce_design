@@ -5,20 +5,32 @@
     gap: 25px;
     padding-bottom: 90px;
 
-    @include custom_media(0px, 991.9px) {
-        justify-content: center;
-
-        grid-template-columns: repeat(auto-fit, minmax(270px, 300px));
+    @include custom_media(0px, 400px){
+        grid-template-columns: 1fr;
+    }
+    @include sm(){
+        grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+    }
+    @include md(){
+        grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
     }
 
+    @include lg(){
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    @include xl(){
+        grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    }
     .blog_item {
         border-radius: 8px;
-        // overflow: hidden;
+        overflow: hidden;
         box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
 
         .top {
             margin-bottom: 8px;
             height: 210px;
+        overflow: hidden;
+
             // .img {
             //     img {}
             // }

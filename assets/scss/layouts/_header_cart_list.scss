@@ -1,7 +1,7 @@
 .cart_items {
     // border: 1px solid red;
     position: absolute;
-    top: calc(100% + 37px);
+    top: calc(100% + 38px);
     right: 0;
     width: 520px;
     max-height: 700px;
@@ -127,6 +127,11 @@
                         display: flex;
                         justify-content: space-between;
                         gap: 30px;
+
+                        @include xs {
+                            flex-direction: column;
+                            gap: 10px;
+                        }
 
                         .price {
                             font-size: 13px;

@@ -1,11 +1,21 @@
-// #banner{
-// }
 .banner_content {
     display: grid;
     grid-template-columns: 500px 1fr;
 
     @include xs {
         display: block;
+    }
+
+    @include sm {
+        display: block;
+    }
+    @include md {
+        grid-template-columns: 310px 1fr;
+
+    }
+    @include lg {
+        grid-template-columns: 420px 1fr;
+
     }
 
     .left {
@@ -21,6 +31,16 @@
                 margin-top: 50px;
                 line-height: 50px;
             }
+
+            @include sm {
+                font-size: 50px;
+                margin-top: 55px;
+                line-height: 50px;
+            }
+            @include md {
+                font-size: 60px;
+                line-height: 60px;
+            }
         }
 
         .sub_heading {
@@ -32,7 +52,19 @@
 
             @include xs {
                 margin-bottom: 27px;
-                margin-top: 58px;
+                margin-top: 40px;
+            }
+
+            @include sm {
+                margin-bottom: 40px;
+                margin-top: 40px;
+            }
+            @include md {
+                margin-bottom: 40px;
+                margin-top: 40px;
+            }
+            @include md {
+                margin-bottom: 60px;
             }
 
             span {
@@ -43,16 +75,28 @@
 
         .banner_btn {
             padding: 18px 95px;
-            @include xs{
+
+            @include xs {
                 padding: 20px 40px
             }
         }
     }
 
     .right {
-        @include xs{
+        @include xs {
             padding-top: 100px;
         }
+
+        @include sm {
+            padding-top: 100px;
+        }
+        @include md {
+            padding-top: 70px;
+        }
+        @include lg {
+            padding-top: 40px;
+        }
+
         .img {
             padding: 10px;
 

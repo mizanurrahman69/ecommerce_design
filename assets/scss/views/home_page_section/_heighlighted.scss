@@ -12,7 +12,13 @@
         grid-template-columns: 1fr;
         padding: 20px 30px;
     }
+
     @include sm {
+        grid-template-columns: 1fr;
+        padding: 20px 30px;
+    }
+
+    @include md {
         grid-template-columns: 1fr;
         padding: 20px 30px;
     }
@@ -35,6 +41,7 @@
             transform: rotate(90deg);
             bottom: -50%;
         }
+
         @include sm {
             width: 100%;
             height: calc(100% + 100px);
@@ -43,6 +50,23 @@
             transform: rotate(58deg);
             bottom: -41%;
             left: 62px;
+        }
+
+        @include md {
+            width: 100%;
+            height: calc(100% + 150px);
+            right: 0;
+            left: 0;
+            top: 125px;
+            transform: rotate(90deg);
+        }
+
+        @include lg {
+            width: 575px;
+        }
+
+        @include xl {
+            width: 765px;
         }
     }
 
@@ -56,7 +80,12 @@
             @include xs {
                 text-align: center;
             }
+
             @include sm {
+                text-align: center;
+            }
+
+            @include md {
                 text-align: center;
             }
 
@@ -75,6 +104,10 @@
                 line-height: 34px;
                 margin-top: 16px;
                 margin-bottom: 40px;
+
+                @include md {
+                    margin-bottom: 25px;
+                }
             }
 
             .btns {

@@ -19,13 +19,8 @@
 @import "./layouts/header_cart_list";
 @import "./layouts/footer";
 
+@import "./components/breadcumb";
+@import "./views/about";
 @import "./views/contact";
 @import "./views/home";
-@import "./views/about";
-
-
-
-
-#product_category_jumbo_manu{
-    display: none;
-}
+@import "./views/category";

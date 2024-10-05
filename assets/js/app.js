@@ -188,3 +188,10 @@ function tooggle_nav() {
         nav_bar_manu.classList.toggle('active');
     }
 }
+
+let name_list = document.querySelector(".name_list");
+let output = document.querySelector(".output")
+
+// output.innerHTML = name_list.innerText;
+
+// console.log(name_list.innerText);

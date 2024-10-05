@@ -67,6 +67,11 @@ footer {
         background-color: #021736;
         padding: 16px;
 
+        @include md {
+            padding: 8px;
+
+        }
+
         .footer_bottom_content {
             display: flex;
             flex-wrap: wrap;
@@ -97,7 +102,7 @@ footer {
 
                     li {
                         a {
-                            color: var(--white);
+                            color: var(--natural_gray);
                             font-size: 12px;
                             line-height: 20px;
                             font-weight: 300;

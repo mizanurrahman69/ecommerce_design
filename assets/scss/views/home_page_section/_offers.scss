@@ -15,6 +15,15 @@
         grid-template-columns: 1fr;
     }
 
+    @include md {
+        grid-template-columns: 1fr;
+    }
+    @include lg(){
+        grid-template-columns: 1fr;
+    }
+    @include xl(){
+        grid-template-columns: 1fr 420px;
+    }
     .left {
         display: grid;
 
@@ -32,7 +41,9 @@
             @include sm {
                 grid-template-columns: 1fr;
             }
-
+            @include xl(){
+                grid-template-columns: 253px 367px;
+            }
             .img {
                 position: absolute;
                 height: 100%;
@@ -66,6 +77,11 @@
                         font-size: 40px;
                         margin-bottom: 40px;
                     }
+
+                    @include md {
+                        font-size: 45px;
+                        margin-bottom: 40px;
+                    }
                 }
 
                 .product_img {
@@ -81,6 +97,15 @@
                             max-width: unset;
                             width: 330px;
                         }
+
+                        @include md {
+                            max-width: unset;
+                            width: 330px;
+                        }
+                        @include xl {
+                            max-width: 256px;
+                        }
+
                     }
                 }
             }
@@ -102,6 +127,11 @@
                     @include sm {
                         flex-wrap: wrap;
                     }
+
+                    @include md {
+                        flex-wrap: wrap;
+                    }
+
 
                     li {
                         padding: 8px;
@@ -154,6 +184,11 @@
                 height: unset;
             }
 
+            @include md {
+                width: unset;
+                height: unset;
+            }
+
             .img {
                 height: 100%;
                 width: 100%;
@@ -182,7 +217,12 @@
 
                 @include sm {
                     bottom: 25px;
-                padding: 15px 30px;
+                    padding: 15px 30px;
+                }
+
+                @include md {
+                    bottom: 25px;
+                    padding: 15px 30px;
                 }
             }
 

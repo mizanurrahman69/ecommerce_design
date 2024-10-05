@@ -1,20 +1,38 @@
-#brand_item{}
+#brand_item {}
 
-.brand_list{
+.brand_list {
     margin-bottom: 48px;
-    .brand_logos{
+
+    .brand_logos {
         // border: var(--border);
         display: flex;
         gap: 25px;
         padding: 60px 0px;
-        @include xs{
+
+        @include xs {
             padding: 20px 0px;
             gap: 0;
         }
-        .img{
-          display: flex;
-          justify-content: center;
-            img{
+
+        @include sm {
+            padding: 20px 0px;
+            gap: 0;
+        }
+
+        @include md {
+            padding: 20px 0px;
+            gap: 0;
+        }
+
+        @include lg {
+            padding: 40px 0px;
+        }
+
+        .img {
+            display: flex;
+            justify-content: center;
+
+            img {
                 object-fit: contain;
                 height: 30px;
                 width: unset;
